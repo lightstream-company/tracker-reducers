@@ -1,0 +1,6 @@
+{
+  "extends": "lightstream",
+  "rules": {
+    "react/prop-types": 0
+  }
+}

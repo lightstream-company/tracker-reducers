@@ -1,0 +1,22 @@
+{
+  "streamId": "c3111a12",
+  "aggregateId": "c3111a12",
+  "aggregate": "Stream",
+  "streamRevision": 0,
+  "commitId": "835",
+  "commitSequence": 0,
+  "commitStamp": "2016-09-07T16:51:59.067Z",
+  "payload": {
+    "data": {
+      "name": "My New Event",
+      "userId": "8d86c10d"
+    },
+    "type": "STREAM_CREATED",
+    "aggregateType": "Stream",
+    "aggregateId": "c3111a12",
+    "version": 0,
+    "createdAt": "2016-09-07T16:51:59.067Z"
+  },
+  "id": "8350",
+  "restInCommitStream": 0
+}

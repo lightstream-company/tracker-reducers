@@ -1,0 +1,31 @@
+{
+  "name": "lightping-tracker-reducers",
+  "version": "0.0.1",
+  "description": "Tracker reducers to maintain state",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightstream-company/tracker-reducers.git"
+  },
+  "keywords": [
+    "tracker",
+    "reducer"
+  ],
+  "author": "Lightstream Company",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lightstream-company/tracker-reducers/issues"
+  },
+  "homepage": "https://github.com/lightstream-company/tracker-reducers#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "redux-actions": "^0.13.0",
+    "tcomb": "^3.2.15"
+  }
+}
