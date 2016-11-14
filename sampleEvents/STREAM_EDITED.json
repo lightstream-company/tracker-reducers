@@ -1,0 +1,21 @@
+{
+  "streamId": "c3111a12",
+  "aggregateId": "c3111a12",
+  "aggregate": "Stream",
+  "streamRevision": 68,
+  "commitId": "776",
+  "commitSequence": 0,
+  "commitStamp": "2016-08-30T12:09:57.479Z",
+  "payload": {
+    "data": {
+      "name": "New Name"
+    },
+    "type": "STREAM_EDITED",
+    "aggregateType": "Stream",
+    "aggregateId": "c3111a12",
+    "version": 68,
+    "createdAt": "2016-08-30T12:09:57.479Z"
+  },
+  "id": "7760",
+  "restInCommitStream": 0
+}

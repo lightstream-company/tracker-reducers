@@ -82,5 +82,13 @@ module.exports = handleActions({
         })
       }
     });
+  },
+  [events.stream.STREAM_EDITED]: (state, action) => {
+    const {payload, id} = action;
+    return State.update(state, {
+      [id]: {
+        '$merge': payload
+      }
+    });
   }
 }, InitialState);
