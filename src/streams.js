@@ -90,5 +90,18 @@ module.exports = handleActions({
         '$merge': payload
       }
     });
+  },
+  [events.stream.KEYWORD_ADDED]: (state, action) => {
+    const {payload, id} = action;
+    const {network, keyword} = payload;
+    return State.update(state, {
+      [id]: {
+        keywords: {
+          [network]: {
+            '$push': [keyword]
+          }
+        }
+      }
+    });
   }
 }, InitialState);

@@ -1,0 +1,22 @@
+{
+  "streamId": "c3111a12",
+  "aggregateId": "c3111a12",
+  "aggregate": "Stream",
+  "streamRevision": 18,
+  "commitId": "325",
+  "commitSequence": 0,
+  "commitStamp": "2016-07-12T15:30:20.270Z",
+  "payload": {
+    "data": {
+      "keyword": "Arnaud",
+      "network": "instagram"
+    },
+    "type": "KEYWORD_ADDED_TO_STREAM",
+    "aggregateType": "Stream",
+    "aggregateId": "c3111a12",
+    "version": 18,
+    "createdAt": "2016-07-12T15:30:20.270Z"
+  },
+  "id": "3250",
+  "restInCommitStream": 0
+}
