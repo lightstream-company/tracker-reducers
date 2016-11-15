@@ -118,5 +118,25 @@ module.exports = handleActions({
         }
       }
     });
+  },
+  [events.stream.ENABLED]: (state, action) => {
+    const {id} = action;
+    return State.update(state, {
+      [id]: {
+        enabled: {
+          '$set': true
+        }
+      }
+    });
+  },
+  [events.stream.DISABLED]: (state, action) => {
+    const {id} = action;
+    return State.update(state, {
+      [id]: {
+        enabled: {
+          '$set': false
+        }
+      }
+    });
   }
 }, InitialState);

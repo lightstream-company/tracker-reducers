@@ -5,6 +5,8 @@ const createdEvent = require('../sampleEvents/CREATED.json');
 const editedEvent = require('../sampleEvents/STREAM_EDITED.json');
 const addKeywordEvent = require('../sampleEvents/KEYWORD_ADDED.json');
 const removeKeywordEvent = require('../sampleEvents/KEYWORD_REMOVED.json');
+const enabledEvent = require('../sampleEvents/ENABLED.json');
+const disabledEvent = require('../sampleEvents/DISABLED.json');
 
 describe('streams', () => {
 
@@ -45,6 +47,17 @@ describe('streams', () => {
       const state3 = reducer(state2, eventMapper(removeKeywordEvent));
       expect(state2.c3111a12.keywords.instagram).to.be.deep.equal(['arnaud']);
       expect(state3.c3111a12.keywords.instagram).to.be.deep.equal([]);
+    });
+  });
+
+  describe('event ENABLED / DISABLED', () => {
+    it('should disabled then enabled again', () => {
+      const state1 = reducer(undefined, eventMapper(createdEvent));
+      const state2 = reducer(state1, eventMapper(disabledEvent));
+      const state3 = reducer(state2, eventMapper(enabledEvent));
+      expect(state1.c3111a12.enabled).to.be.equal(true);
+      expect(state2.c3111a12.enabled).to.be.equal(false);
+      expect(state3.c3111a12.enabled).to.be.equal(true);
     });
   });
 
