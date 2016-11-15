@@ -1,5 +1,6 @@
 const {handleActions} = require('redux-actions');
 const t = require('tcomb');
+const _ = require('lodash');
 const events = require('./events');
 
 const socialNetworks = t.enums.of([
@@ -98,7 +99,21 @@ module.exports = handleActions({
       [id]: {
         keywords: {
           [network]: {
-            '$push': [keyword]
+            '$push': [keyword.toLowerCase()]
+          }
+        }
+      }
+    });
+  },
+  [events.stream.KEYWORD_REMOVED]: (state, action) => {
+    const {payload, id} = action;
+    const {network, keyword} = payload;
+    const orginalKeywords = state[id].keywords[network];
+    return State.update(state, {
+      [id]: {
+        keywords: {
+          [network]: {
+            '$set': _.without(orginalKeywords, keyword.toLowerCase())
           }
         }
       }
