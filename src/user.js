@@ -29,11 +29,13 @@ const UserBetaSignedUp = t.struct({
 
 
 const State = t.struct({
-  profile: t.maybe(User)
+  profile: t.maybe(User),
+  logged: t.Boolean
 });
 
 const InitialState = State({
-  profile: null
+  profile: null,
+  logged: false
 });
 
 module.exports = handleActions({
@@ -52,6 +54,18 @@ module.exports = handleActions({
     return State.update(state, {
       profile: {
         '$merge': Object.assign({}, payload, userDefaultValue)
+      }
+    });
+  },
+  [user.SIGNED_IN]: (state, action) => {
+    return State.update(state, {
+      profile: {
+        lastConnectionDate: {
+          '$set': action.payload.at
+        }
+      },
+      logged: {
+        '$set': true
       }
     });
   }

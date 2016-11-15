@@ -1,0 +1,22 @@
+{
+  "streamId": "8d86c10d",
+  "aggregateId": "8d86c10d",
+  "aggregate": "User",
+  "streamRevision": 235,
+  "commitId": "883",
+  "commitSequence": 0,
+  "commitStamp": "2016-09-19T23:28:44.651Z",
+  "payload": {
+    "data": {
+      "at": "2016-09-19T23:28:44.568Z",
+      "ip": "92.145.50.34"
+    },
+    "type": "USER_SIGNED_IN",
+    "aggregateType": "User",
+    "aggregateId": "8d86c10d",
+    "version": 235,
+    "createdAt": "2016-09-19T23:28:44.651Z"
+  },
+  "id": "8830",
+  "restInCommitStream": 0
+}
