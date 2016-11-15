@@ -1,0 +1,23 @@
+{
+  "streamId": "5baf7ab6",
+  "aggregateId": "5baf7ab6",
+  "aggregate": "User",
+  "streamRevision": 0,
+  "commitId": "1",
+  "commitSequence": 0,
+  "commitStamp": "2016-03-24T11:06:21.162Z",
+  "payload": {
+    "data": {
+      "email": "jerome.avoustin@tweetping.net",
+      "category": "events",
+      "language": "en-US"
+    },
+    "type": "BETA_SUBSCRIBED",
+    "aggregateType": "User",
+    "aggregateId": "5baf7ab6",
+    "version": 0,
+    "createdAt": "2016-03-24T11:06:21.162Z"
+  },
+  "id": "10",
+  "restInCommitStream": 0
+}
