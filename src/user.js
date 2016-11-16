@@ -1,6 +1,6 @@
 const {handleActions} = require('redux-actions');
 const t = require('tcomb');
-const {user} = require('./events');
+const {user, account} = require('./events');
 
 const User = t.struct({
   email: t.String,
@@ -66,6 +66,24 @@ module.exports = handleActions({
       },
       logged: {
         '$set': true
+      }
+    });
+  },
+  [account.CREDITED]: (state, action) => {
+    return State.update(state, {
+      profile: {
+        postsRemaining: {
+          '$set': state.profile.postsRemaining + action.payload.amount
+        }
+      }
+    });
+  },
+  [account.DEBITED]: (state, action) => {
+    return State.update(state, {
+      profile: {
+        postsRemaining: {
+          '$set': Math.max(state.profile.postsRemaining - action.payload.amount, 0)
+        }
       }
     });
   }

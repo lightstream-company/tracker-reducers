@@ -1,0 +1,21 @@
+{
+  "streamId": "5baf7ab6",
+  "aggregateId": "5baf7ab6",
+  "aggregate": "Account",
+  "streamRevision": 34,
+  "commitId": "1250",
+  "commitSequence": 0,
+  "commitStamp": "2016-10-18T11:26:48.356Z",
+  "payload": {
+    "data": {
+      "amount": 10000
+    },
+    "type": "ACCOUNT_CREDITED",
+    "aggregateType": "Account",
+    "aggregateId": "5baf7ab6",
+    "version": 34,
+    "createdAt": "2016-10-18T11:26:48.356Z"
+  },
+  "id": "12500",
+  "restInCommitStream": 1
+}
