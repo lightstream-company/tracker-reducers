@@ -1,0 +1,22 @@
+{
+  "streamId": "c3111a12",
+  "aggregateId": "c3111a12",
+  "aggregate": "Stream",
+  "streamRevision": 14,
+  "commitId": "1092",
+  "commitSequence": 0,
+  "commitStamp": "2016-10-07T10:02:01.462Z",
+  "payload": {
+    "data": {
+      "itemId": "59106894",
+      "network": "twitter"
+    },
+    "type": "SOCIAL_ITEM_UNLINKED_FROM_STREAM",
+    "aggregateType": "Stream",
+    "aggregateId": "c3111a12",
+    "version": 14,
+    "createdAt": "2016-10-07T10:02:01.462Z"
+  },
+  "id": "10920",
+  "restInCommitStream": 1
+}

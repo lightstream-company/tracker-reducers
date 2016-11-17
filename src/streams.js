@@ -2,20 +2,6 @@ const {handleActions} = require('redux-actions');
 const t = require('tcomb');
 const _ = require('lodash');
 const events = require('./events');
-const Network = require('./network');
-
-
-const socialItem = t.struct({
-  userId: t.maybe(t.String),
-  secretToken: t.maybe(t.String),
-  name: t.String,
-  itemId: t.String,
-  accountId: t.String,
-  network: Network,
-  streams: t.maybe(t.list(t.String)),
-  type: t.String,
-  token: t.String
-}, 'socialItem');
 
 const boundingBox = t.list(t.Number);
 const boundingBoxes = t.list(boundingBox);
@@ -40,15 +26,15 @@ const defaultKeywords = {
 };
 
 const socialItems = t.struct({
-  facebook: t.list(socialItem),
-  twitter: t.list(socialItem),
-  instagram: t.list(socialItem)
+  facebook: t.list(t.String),
+  twitter: t.maybe(t.String),
+  instagram: t.maybe(t.String)
 });
 
 const defaultSocialItemsValue = {
   facebook: [],
-  twitter: [],
-  instagram: []
+  twitter: null,
+  instagram: null
 };
 
 const stream = t.struct({
@@ -136,5 +122,57 @@ module.exports = handleActions({
         }
       }
     });
+  },
+  [events.stream.SOCIAL_ITEM_LINKED]: (state, action) => {
+    const {id, payload} = action;
+    const {network, itemId} = payload;
+    if (network === 'facebook') {
+      return State.update(state, {
+        [id]: {
+          socialItems: {
+            facebook: {
+              '$push': itemId
+            }
+          }
+        }
+      });
+    } else {
+      //twitter & instagram
+      return State.update(state, {
+        [id]: {
+          socialItems: {
+            [network]: {
+              '$set': itemId
+            }
+          }
+        }
+      });
+    }
+  },
+  [events.stream.SOCIAL_ITEM_UNLINKED]: (state, action) => {
+    const {id, payload} = action;
+    const {network, itemId} = payload;
+    if (network === 'facebook') {
+      return State.update(state, {
+        [id]: {
+          socialItems: {
+            facebook: {
+              '$set': _.without(state[id].socialItems.facebook, itemId)
+            }
+          }
+        }
+      });
+    } else {
+      //twitter & instagram
+      return State.update(state, {
+        [id]: {
+          socialItems: {
+            [network]: {
+              '$set': null
+            }
+          }
+        }
+      });
+    }
   }
 }, InitialState);

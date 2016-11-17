@@ -1,0 +1,26 @@
+{
+  "streamId": "c3111a12",
+  "aggregateId": "c3111a12",
+  "aggregate": "Stream",
+  "streamRevision": 4,
+  "commitId": "855",
+  "commitSequence": 0,
+  "commitStamp": "2016-09-13T14:39:00.987Z",
+  "payload": {
+    "data": {
+      "itemId": "59106894",
+      "network": "twitter",
+      "accountId": "1234",
+      "type": "account",
+      "token": "EAAOZBhlOf4AMBAMPFn44v6adAxTUf5D4KBr9vWDKKJSvPmZBDABlS26CmxegQoK25T7XhBzK2LIIBHhwCQCbyQdjRQZAKUtnjt8ezSgO20i5BiimVAzOrFMRQpU5KAoEn4gdmqv5yCaZCYgsCAkHtVDuDR8n0MSgZAGvJ8NbQdAZDZD",
+      "name": "Adopteunbenoit"
+    },
+    "type": "SOCIAL_ITEM_LINKED_TO_STREAM",
+    "aggregateType": "Stream",
+    "aggregateId": "c3111a12",
+    "version": 4,
+    "createdAt": "2016-09-13T14:39:00.987Z"
+  },
+  "id": "8550",
+  "restInCommitStream": 0
+}

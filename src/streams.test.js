@@ -7,6 +7,8 @@ const addKeywordEvent = require('../sampleEvents/KEYWORD_ADDED.json');
 const removeKeywordEvent = require('../sampleEvents/KEYWORD_REMOVED.json');
 const enabledEvent = require('../sampleEvents/ENABLED.json');
 const disabledEvent = require('../sampleEvents/DISABLED.json');
+const linkEvent = require('../sampleEvents/SOCIAL_ITEM_LINKED.json');
+const unlinkEvent = require('../sampleEvents/SOCIAL_ITEM_UNLINKED.json');
 
 describe('streams', () => {
 
@@ -58,6 +60,18 @@ describe('streams', () => {
       expect(state1.c3111a12.enabled).to.be.equal(true);
       expect(state2.c3111a12.enabled).to.be.equal(false);
       expect(state3.c3111a12.enabled).to.be.equal(true);
+    });
+  });
+
+  describe('event SOCIAL_ITEM_LINKED / SOCIAL_ITEM_UNLINKED', () => {
+    it('should link / unlink a social item to a stream', () => {
+      const state1 = reducer(undefined, eventMapper(createdEvent));
+      console.log(state1);
+      const state2 = reducer(state1, eventMapper(linkEvent));
+      const state3 = reducer(state2, eventMapper(unlinkEvent));
+      expect(state1.c3111a12.socialItems.twitter).to.be.equal(null);
+      expect(state2.c3111a12.socialItems.twitter).to.be.equal('59106894');
+      expect(state3.c3111a12.socialItems.twitter).to.be.equal(null);
     });
   });
 
