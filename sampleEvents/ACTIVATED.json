@@ -1,0 +1,19 @@
+{
+  "streamId": "c3111a12",
+  "aggregateId": "c3111a12",
+  "aggregate": "Stream",
+  "streamRevision": 394,
+  "commitId": "1251",
+  "commitSequence": 0,
+  "commitStamp": "2016-10-18T11:26:49.248Z",
+  "payload": {
+    "data": {},
+    "type": "STREAM_ACTIVATED",
+    "aggregateType": "Stream",
+    "aggregateId": "c3111a12",
+    "version": 394,
+    "createdAt": "2016-10-18T11:26:49.248Z"
+  },
+  "id": "12510",
+  "restInCommitStream": 0
+}

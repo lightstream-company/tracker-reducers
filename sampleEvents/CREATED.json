@@ -9,7 +9,8 @@
   "payload": {
     "data": {
       "name": "My New Event",
-      "userId": "8d86c10d"
+      "userId": "8d86c10d",
+      "activated": true
     },
     "type": "STREAM_CREATED",
     "aggregateType": "Stream",

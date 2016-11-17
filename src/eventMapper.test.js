@@ -9,6 +9,7 @@ describe('eventMapper', () => {
       id: 'c3111a12',
       payload: {
         name: 'My New Event',
+        activated: true,
         userId: '8d86c10d'
       }
     });

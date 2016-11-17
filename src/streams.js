@@ -41,6 +41,7 @@ const stream = t.struct({
   name: t.String,
   id: t.String,
   enabled: t.Bool,
+  activated: t.Bool,
   keywords,
   socialItems,
   boundingBoxes: boundingBoxesByNetwork
@@ -48,6 +49,7 @@ const stream = t.struct({
 
 const defaultStreamValue = {
   enabled: true,
+  activated: true,
   keywords: defaultKeywords,
   socialItems: defaultSocialItemsValue,
   boundingBoxes: defaultBoundingBoxesByNetwork
@@ -174,5 +176,19 @@ module.exports = handleActions({
         }
       });
     }
-  }
+  },
+  [events.stream.ACTIVATED]: (state, action) => State.update(state, {
+    [action.id]: {
+      activated: {
+        '$set': true
+      }
+    }
+  }),
+  [events.stream.DEACTIVATED]: (state, action) => State.update(state, {
+    [action.id]: {
+      activated: {
+        '$set': false
+      }
+    }
+  })
 }, InitialState);
