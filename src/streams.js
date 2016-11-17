@@ -2,10 +2,8 @@ const {handleActions} = require('redux-actions');
 const t = require('tcomb');
 const _ = require('lodash');
 const events = require('./events');
+const Network = require('./network');
 
-const socialNetworks = t.enums.of([
-  'twitter', 'facebook', 'instagram'
-], 'socialNetworks');
 
 const socialItem = t.struct({
   userId: t.maybe(t.String),
@@ -13,7 +11,7 @@ const socialItem = t.struct({
   name: t.String,
   itemId: t.String,
   accountId: t.String,
-  network: socialNetworks,
+  network: Network,
   streams: t.maybe(t.list(t.String)),
   type: t.String,
   token: t.String

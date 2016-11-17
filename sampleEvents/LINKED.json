@@ -1,0 +1,25 @@
+{
+  "streamId": "6c06aaa7",
+  "aggregateId": "6c06aaa7",
+  "aggregate": "SocialAccount",
+  "streamRevision": 0,
+  "commitId": "369",
+  "commitSequence": 0,
+  "commitStamp": "2016-07-15T12:17:34.315Z",
+  "payload": {
+    "data": {
+      "type": "facebook",
+      "userId": "b3a4ee98",
+      "accountId": "10157105901095587",
+      "accessToken": "EAAOZBhlOf4AMBALgmTltg3lisoctbIkLog5uEIHYwSsffaJ5EinSHIdJSEKwPa9hQqQABxzyZCICztvsAMSmmCIRqrJSo0qZBrneRsU9tJ7q4y96cVwgXm1Tf3PnyvP2QbHUdc6CgbvtEEHTO2AVQeH0XCpTO0ZD",
+      "screenName": "Thomas Vieux-Pernon"
+    },
+    "type": "SOCIAL_ACCOUNT_LINKED",
+    "aggregateType": "SocialAccount",
+    "aggregateId": "6c06aaa7",
+    "version": 0,
+    "createdAt": "2016-07-15T12:17:34.315Z"
+  },
+  "id": "3690",
+  "restInCommitStream": 0
+}

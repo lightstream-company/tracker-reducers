@@ -33,7 +33,7 @@ const State = t.struct({
   logged: t.Boolean
 });
 
-const InitialState = State({
+const initialState = State({
   profile: null,
   logged: false
 });
@@ -87,4 +87,4 @@ module.exports = handleActions({
       }
     });
   }
-}, InitialState);
+}, initialState);
