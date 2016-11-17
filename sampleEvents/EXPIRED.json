@@ -1,0 +1,22 @@
+{
+  "streamId": "6c06aaa7",
+  "aggregateId": "6c06aaa7",
+  "aggregate": "SocialAccount",
+  "streamRevision": 1,
+  "commitId": "1459",
+  "commitSequence": 0,
+  "commitStamp": "2016-10-24T13:55:36.242Z",
+  "payload": {
+    "data": {
+      "type": "facebook",
+      "accountId": "10157105901095587"
+    },
+    "type": "SOCIAL_ACCOUNT_EXPIRED",
+    "aggregateType": "SocialAccount",
+    "aggregateId": "6c06aaa7",
+    "version": 1,
+    "createdAt": "2016-10-24T13:55:36.242Z"
+  },
+  "id": "14590",
+  "restInCommitStream": 0
+}

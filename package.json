@@ -1,6 +1,6 @@
 {
   "name": "lightping-tracker-reducers",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Tracker reducers to maintain state",
   "main": "src/index.js",
   "scripts": {

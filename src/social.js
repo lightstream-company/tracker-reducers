@@ -60,5 +60,17 @@ module.exports = handleActions({
         }
       }
     });
+  },
+  [social.EXPIRED]: (state, action) => {
+    const {type, accountId} = action.payload;
+    return State.update(state, {
+      [type]: {
+        [accountId]: {
+          valid: {
+            '$set': false
+          }
+        }
+      }
+    });
   }
 }, initialState);
