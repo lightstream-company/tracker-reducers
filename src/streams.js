@@ -190,5 +190,31 @@ module.exports = handleActions({
         '$set': false
       }
     }
-  })
+  }),
+  [events.stream.BOUNDING_BOXES_SET]: (state, action) => {
+    const {id, payload} = action;
+    const {boundingBoxes, network} = payload;
+    return State.update(state, {
+      [id]: {
+        boundingBoxes: {
+          [network]: {
+            '$set': boundingBoxes
+          }
+        }
+      }
+    });
+  },
+  [events.stream.BOUNDING_BOXES_CLEARED]: (state, action) => {
+    const {id, payload} = action;
+    const {network} = payload;
+    return State.update(state, {
+      [id]: {
+        boundingBoxes: {
+          [network]: {
+            '$set': []
+          }
+        }
+      }
+    });
+  }
 }, InitialState);

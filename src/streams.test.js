@@ -11,6 +11,8 @@ const linkEvent = require('../sampleEvents/SOCIAL_ITEM_LINKED.json');
 const unlinkEvent = require('../sampleEvents/SOCIAL_ITEM_UNLINKED.json');
 const activatedEvent = require('../sampleEvents/ACTIVATED.json');
 const deactivatedEvent = require('../sampleEvents/DEACTIVATED.json');
+const bboxSetEvent = require('../sampleEvents/BOUNDING_BOXES_SET.json');
+const bboxClearEvent = require('../sampleEvents/BOUNDING_BOXES_CLEARED.json');
 
 describe('streams', () => {
 
@@ -84,6 +86,17 @@ describe('streams', () => {
       expect(state1.c3111a12.activated).to.be.equal(true);
       expect(state2.c3111a12.activated).to.be.equal(false);
       expect(state3.c3111a12.activated).to.be.equal(true);
+    });
+  });
+
+  describe('event BOUNDING_BOXES_SET / BOUNDING_BOXES_CLEARED', () => {
+    it('should add then clear bouding box', () => {
+      const state1 = reducer(undefined, eventMapper(createdEvent));
+      const state2 = reducer(state1, eventMapper(bboxSetEvent));
+      const state3 = reducer(state2, eventMapper(bboxClearEvent));
+      expect(state1.c3111a12.boundingBoxes.twitter).to.be.deep.equal([]);
+      expect(state2.c3111a12.boundingBoxes.twitter).to.be.deep.equal([[-10,-10,10,10]]);
+      expect(state3.c3111a12.boundingBoxes.twitter).to.be.deep.equal([]);
     });
   });
 

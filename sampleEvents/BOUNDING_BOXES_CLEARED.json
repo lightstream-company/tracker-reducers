@@ -1,0 +1,21 @@
+{
+  "streamId": "c3111a12",
+  "aggregateId": "c3111a12",
+  "aggregate": "Stream",
+  "streamRevision": 42,
+  "commitId": "981",
+  "commitSequence": 0,
+  "commitStamp": "2016-09-28T12:32:20.691Z",
+  "payload": {
+    "data": {
+      "network": "twitter"
+    },
+    "type": "BOUNDING_BOXES_CLEARED_FROM_STREAM",
+    "aggregateType": "Stream",
+    "aggregateId": "c3111a12",
+    "version": 42,
+    "createdAt": "2016-09-28T12:32:20.691Z"
+  },
+  "id": "9810",
+  "restInCommitStream": 1
+}
