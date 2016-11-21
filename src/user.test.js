@@ -31,7 +31,6 @@ describe('user', () => {
         companyName: 'Lightstream',
         firstName: 'Jerome',
         lastName: 'Avoustin',
-        password: 'ca88f32148e3054974dc77948346109b15d24c85a3e41b02b215942c7edaae97',
         postsRemaining: 0,
         lastConnectionDate: undefined
       });

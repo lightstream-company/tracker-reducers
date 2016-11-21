@@ -9,8 +9,7 @@ const User = t.struct({
   companyName: t.maybe(t.String),
   firstName: t.maybe(t.String),
   lastConnectionDate: t.maybe(t.String),
-  lastName: t.maybe(t.String),
-  password: t.maybe(t.String)
+  lastName: t.maybe(t.String)
 }, 'User');
 
 const userDefaultValue = {
