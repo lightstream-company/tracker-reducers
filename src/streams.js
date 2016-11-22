@@ -133,7 +133,7 @@ module.exports = handleActions({
         [id]: {
           socialItems: {
             facebook: {
-              '$push': itemId
+              '$set': _.uniq([...state[id].socialItems.facebook, itemId])
             }
           }
         }
@@ -154,6 +154,7 @@ module.exports = handleActions({
   [events.stream.SOCIAL_ITEM_UNLINKED]: (state, action) => {
     const {id, payload} = action;
     const {network, itemId} = payload;
+    console.log(network, itemId);
     if (network === 'facebook') {
       return State.update(state, {
         [id]: {

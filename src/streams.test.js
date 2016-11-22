@@ -8,7 +8,9 @@ const removeKeywordEvent = require('../sampleEvents/KEYWORD_REMOVED.json');
 const enabledEvent = require('../sampleEvents/ENABLED.json');
 const disabledEvent = require('../sampleEvents/DISABLED.json');
 const linkEvent = require('../sampleEvents/SOCIAL_ITEM_LINKED.json');
+const linkFacebookEvent = require('../sampleEvents/SOCIAL_ITEM_LINKED_facebook.json');
 const unlinkEvent = require('../sampleEvents/SOCIAL_ITEM_UNLINKED.json');
+const unlinkFacebookEvent = require('../sampleEvents/SOCIAL_ITEM_UNLINKED_facebook.json');
 const activatedEvent = require('../sampleEvents/ACTIVATED.json');
 const deactivatedEvent = require('../sampleEvents/DEACTIVATED.json');
 const bboxSetEvent = require('../sampleEvents/BOUNDING_BOXES_SET.json');
@@ -75,6 +77,17 @@ describe('streams', () => {
       expect(state1.c3111a12.socialItems.twitter).to.be.equal(null);
       expect(state2.c3111a12.socialItems.twitter).to.be.equal('59106894');
       expect(state3.c3111a12.socialItems.twitter).to.be.equal(null);
+    });
+
+    it('should link / unlink facebook pages to a stream', () => {
+      const state1 = reducer(undefined, eventMapper(createdEvent));
+      const state2 = reducer(state1, linkFacebookEvent);
+      const state25 = reducer(state2, linkFacebookEvent);
+      const state3 = reducer(state25, unlinkFacebookEvent);
+      expect(state1.c3111a12.socialItems.facebook).to.be.deep.equal([]);
+      expect(state2.c3111a12.socialItems.facebook).to.be.deep.equal(['24932281961']);
+      expect(state25.c3111a12.socialItems.facebook).to.be.deep.equal(['24932281961']);
+      expect(state3.c3111a12.socialItems.facebook).to.be.deep.equal([]);
     });
   });
 

@@ -1,0 +1,14 @@
+{
+  "id": "c3111a12",
+  "type": "SOCIAL_ITEM_LINKED_TO_STREAM",
+  "payload": {
+    "itemId": "24932281961",
+    "network": "facebook",
+    "type": "page",
+    "accountId": "1599867793658063",
+    "token": "EAAHqZBN655GsBANC2mUm4AD6fH9NIwUY9T3FZBvE39ZApsv6vHDgF12V5fYsBJW3pl74OgeOhByrgJPt9edEEuSh2ZCZBLXfQ7vdJAuPpc7r2je2il26f8IxqIJcuUKzmy9SePK9HcTE3PknCSGXTBaeZCZCT6Lgu10OcZBO7KFjSgZDZD",
+    "name": "Nutella"
+  },
+  "userId": "bcc4a4ec",
+  "version": 23
+}
