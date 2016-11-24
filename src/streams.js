@@ -164,7 +164,7 @@ module.exports = handleActions({
       }
     });
   },
-  [combineActions(...events.all)]: (state, action) => {
+  [combineActions(..._.values(events.stream))]: (state, action) => {
     return State.update(state, {
       [action.id]: {
         lastAction: {

@@ -72,10 +72,10 @@ describe('user', () => {
 
   describe('last action', () => {
     it('with 1 event', () => {
-      const state = reducer(initUser(), eventMapper(creditedEvent));
+      const state = reducer(undefined, eventMapper(betaSubscribed));
 
-      expect(state.lastAction).to.have.a.property('type', 'ACCOUNT_CREDITED');
-      expect(state.lastAction).to.have.a.property('date', '2016-10-18T11:26:48.356Z');
+      expect(state.lastAction).to.have.a.property('type', 'BETA_SUBSCRIBED');
+      expect(state.lastAction).to.have.a.property('date', '2016-03-24T11:06:21.162Z');
     });
 
     it('with 2 events', () => {
