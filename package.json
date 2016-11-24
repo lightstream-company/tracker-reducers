@@ -4,7 +4,8 @@
   "description": "Tracker reducers to maintain state",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/*.test.js"
+    "test": "mocha src/*.test.js",
+    "doc": "node scripts/doc.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,8 @@
   "homepage": "https://github.com/lightstream-company/tracker-reducers#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.1.2"
+    "mocha": "^3.1.2",
+    "tcomb-doc": "^0.5.2"
   },
   "dependencies": {
     "lodash": "^4.17.2",
