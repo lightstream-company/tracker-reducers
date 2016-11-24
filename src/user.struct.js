@@ -1,4 +1,7 @@
+'use strict';
+
 const t = require('tcomb');
+const Action = require('./actions');
 
 const User = t.struct({
   email: t.String,
@@ -24,10 +27,6 @@ const UserBetaSignedUp = t.struct({
 }, 'UserBetaSignedUp');
 */
 
-const Action = t.struct({
-  type: t.String,
-  date: t.String
-}, 'Action');
 
 const State = t.struct({
   profile: t.maybe(User),

@@ -1,4 +1,4 @@
-const {handleActions} = require('redux-actions');
+const {handleActions, combineActions} = require('redux-actions');
 const _ = require('lodash');
 const events = require('./events');
 const {State, defaultStreamValue} = require('./streams.struct');
@@ -160,6 +160,15 @@ module.exports = handleActions({
           [network]: {
             '$set': []
           }
+        }
+      }
+    });
+  },
+  [combineActions(...events.all)]: (state, action) => {
+    return State.update(state, {
+      [action.id]: {
+        lastAction: {
+          '$set': _.pick(action, 'type', 'date')
         }
       }
     });

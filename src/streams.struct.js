@@ -1,4 +1,7 @@
+'use strict';
+
 const t = require('tcomb');
+const Action = require('./actions');
 
 const boundingBox = t.list(t.Number);
 const boundingBoxes = t.list(boundingBox);
@@ -41,7 +44,8 @@ const stream = t.struct({
   activated: t.Bool,
   keywords,
   socialItems,
-  boundingBoxes: boundingBoxesByNetwork
+  boundingBoxes: boundingBoxesByNetwork,
+  lastAction: t.maybe(Action)
 }, 'stream');
 
 const defaultStreamValue = {
@@ -49,7 +53,8 @@ const defaultStreamValue = {
   activated: true,
   keywords: defaultKeywords,
   socialItems: defaultSocialItemsValue,
-  boundingBoxes: defaultBoundingBoxesByNetwork
+  boundingBoxes: defaultBoundingBoxesByNetwork,
+  lastAction: null
 };
 
 const State = t.dict(t.String, stream);

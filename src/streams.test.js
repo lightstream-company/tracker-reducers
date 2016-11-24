@@ -92,7 +92,7 @@ describe('streams', () => {
   });
 
   describe('event ACTIVATE / DEACTIVATE', () => {
-    it('should activate / deactiavte a stream', () => {
+    it('should activate / deactivate a stream', () => {
       const state1 = reducer(undefined, eventMapper(createdEvent));
       const state2 = reducer(state1, eventMapper(deactivatedEvent));
       const state3 = reducer(state2, eventMapper(activatedEvent));
@@ -103,13 +103,22 @@ describe('streams', () => {
   });
 
   describe('event BOUNDING_BOXES_SET / BOUNDING_BOXES_CLEARED', () => {
-    it('should add then clear bouding box', () => {
+    it('should add then clear bounding box', () => {
       const state1 = reducer(undefined, eventMapper(createdEvent));
       const state2 = reducer(state1, eventMapper(bboxSetEvent));
       const state3 = reducer(state2, eventMapper(bboxClearEvent));
       expect(state1.c3111a12.boundingBoxes.twitter).to.be.deep.equal([]);
       expect(state2.c3111a12.boundingBoxes.twitter).to.be.deep.equal([[-10,-10,10,10]]);
       expect(state3.c3111a12.boundingBoxes.twitter).to.be.deep.equal([]);
+    });
+  });
+
+  describe('last action', () => {
+    it('with 1 event', () => {
+      const state = reducer(undefined, eventMapper(createdEvent));
+
+      expect(state.c3111a12.lastAction).to.have.a.property('type', 'STREAM_CREATED');
+      expect(state.c3111a12.lastAction).to.have.a.property('date', '2016-09-07T16:51:59.067Z');
     });
   });
 
