@@ -70,4 +70,21 @@ describe('user', () => {
     });
   });
 
+  describe('last action', () => {
+    it('with 1 event', () => {
+      const state = reducer(initUser(), eventMapper(creditedEvent));
+
+      expect(state.lastAction).to.have.a.property('type', 'ACCOUNT_CREDITED');
+      expect(state.lastAction).to.have.a.property('date', '2016-10-18T11:26:48.356Z');
+    });
+
+    it('with 2 events', () => {
+      const state1 = reducer(initUser(), eventMapper(creditedEvent));
+      const state = reducer(state1, eventMapper(signedIn));
+
+      expect(state.lastAction).to.have.a.property('type', 'USER_SIGNED_IN');
+      expect(state.lastAction).to.have.a.property('date', '2016-09-19T23:28:44.651Z');
+    });
+  });
+
 });

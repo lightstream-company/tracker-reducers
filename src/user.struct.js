@@ -24,9 +24,14 @@ const UserBetaSignedUp = t.struct({
 }, 'UserBetaSignedUp');
 */
 
+const Action = t.struct({
+  type: t.String,
+  date: t.String
+}, 'Action');
 
 const State = t.struct({
   profile: t.maybe(User),
+  lastAction: t.maybe(Action),
   logged: t.Boolean
 });
 

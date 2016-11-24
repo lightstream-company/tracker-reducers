@@ -1,4 +1,8 @@
-module.exports = {
+'use strict';
+
+const _ = require('lodash');
+
+const events = {
   account: {
     CREDITED: 'ACCOUNT_CREDITED',
     DEBITED: 'ACCOUNT_DEBITED',
@@ -36,3 +40,9 @@ module.exports = {
     EXPIRED: 'SOCIAL_ACCOUNT_EXPIRED'
   }
 };
+
+const all = _.flatMap(
+  Object.keys(events)
+    .map(aggregate => _.values(events[aggregate])));
+
+module.exports = Object.assign({}, events, {all});

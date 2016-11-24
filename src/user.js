@@ -1,10 +1,13 @@
-const {handleActions} = require('redux-actions');
-const {user, account} = require('./events');
-const {State, userDefaultValue} = require('./user.struct');
+'use strict';
 
+const {handleActions, combineActions} = require('redux-actions');
+const {user, account, all} = require('./events');
+const {State, userDefaultValue} = require('./user.struct');
+const {pick} = require('lodash');
 
 const initialState = State({
   profile: null,
+  lastAction: null,
   logged: false
 });
 
@@ -45,6 +48,9 @@ module.exports = handleActions({
         postsRemaining: {
           '$set': state.profile.postsRemaining + action.payload.amount
         }
+      },
+      lastAction: {
+        '$set': pick(action, 'type', 'date')
       }
     });
   },
@@ -54,6 +60,13 @@ module.exports = handleActions({
         postsRemaining: {
           '$set': Math.max(state.profile.postsRemaining - action.payload.amount, 0)
         }
+      }
+    });
+  },
+  [combineActions(...all)]: (state, action) => {
+    return State.update(state, {
+      lastAction: {
+        '$set': pick(action, 'type', 'date')
       }
     });
   }
