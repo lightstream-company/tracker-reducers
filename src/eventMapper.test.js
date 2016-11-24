@@ -11,7 +11,8 @@ describe('eventMapper', () => {
         name: 'My New Event',
         activated: true,
         userId: '8d86c10d'
-      }
+      },
+      date: '2016-09-07T16:51:59.067Z'
     });
   });
 });
