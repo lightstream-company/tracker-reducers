@@ -1,7 +1,7 @@
 'use strict';
 
 const {handleActions, combineActions} = require('redux-actions');
-const {user, account, all} = require('./events');
+const {user, account, actions} = require('./events');
 const {State, userDefaultValue} = require('./user.struct');
 const {pick} = require('lodash');
 
@@ -63,7 +63,7 @@ module.exports = handleActions({
       }
     });
   },
-  [combineActions(...all)]: (state, action) => {
+  [combineActions(...actions)]: (state, action) => {
     return State.update(state, {
       lastAction: {
         '$set': pick(action, 'type', 'date')

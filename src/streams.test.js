@@ -113,16 +113,17 @@ describe('streams', () => {
     });
   });
 
-  describe('last action', () => {
-    it('with no event', () => {
+  describe('last user action', () => {
+    it('with 1 event', () => {
       const state = reducer(undefined, eventMapper(createdEvent));
 
       expect(state.c3111a12.lastAction).to.have.a.property('type', 'STREAM_CREATED');
       expect(state.c3111a12.lastAction).to.have.a.property('date', '2016-09-07T16:51:59.067Z');
     });
 
-    it('with 1 event', () => {
-      const state = reducer(undefined, eventMapper(createdEvent));
+    it('with an auto event', () => {
+      const state1 = reducer(undefined, eventMapper(createdEvent));
+      const state = reducer(state1, eventMapper(activatedEvent));
 
       expect(state.c3111a12.lastAction).to.have.a.property('type', 'STREAM_CREATED');
       expect(state.c3111a12.lastAction).to.have.a.property('date', '2016-09-07T16:51:59.067Z');

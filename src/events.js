@@ -1,6 +1,6 @@
 'use strict';
 
-const _ = require('lodash');
+const {flatMap, values} = require('lodash');
 
 const events = {
   account: {
@@ -26,10 +26,10 @@ const events = {
     DISABLED: 'STREAM_DISABLED',
     ENABLED: 'STREAM_ENABLED',
     STREAM_EDITED: 'STREAM_EDITED',
-    ACTIVATED: 'STREAM_ACTIVATED',
-    DEACTIVATED: 'STREAM_DEACTIVATED',
     BOUNDING_BOXES_SET: 'BOUNDING_BOXES_SET_TO_STREAM',
     BOUNDING_BOXES_CLEARED: 'BOUNDING_BOXES_CLEARED_FROM_STREAM',
+    ACTIVATED: 'STREAM_ACTIVATED',
+    DEACTIVATED: 'STREAM_DEACTIVATED',
     CONNECTOR_ENABLED: 'STREAM_NETWORK_CONNECTOR_ENABLED',
     CONNECTOR_DISABLED: 'STREAM_NETWORK_CONNECTOR_DISABLED',
     CONNECTOR_RESET: 'STREAM_NETWORK_CONNECTOR_RESET'
@@ -41,8 +41,24 @@ const events = {
   }
 };
 
-const all = _.flatMap(
+const all = flatMap(
   Object.keys(events)
-    .map(aggregate => _.values(events[aggregate])));
+    .map(aggregate => values(events[aggregate])));
 
-module.exports = Object.assign({}, events, {all});
+const streamAutoEvents = [
+  events.stream.ACTIVATED,
+  events.stream.DEACTIVATED,
+  events.stream.CONNECTOR_ENABLED,
+  events.stream.CONNECTOR_DISABLED,
+  events.stream.CONNECTOR_RESET
+];
+
+const streamActions = values(events.stream)
+  .filter(e => streamAutoEvents.indexOf(e) < 0);
+
+const actions = [events.account.CREDITED, events.account.REFILLED]
+  .concat(values(events.user).filter(e => e !== events.user.TOKEN_REVOKED))
+  .concat(streamActions)
+  .concat(values(events.social));
+
+module.exports = Object.assign({}, events, {all, actions, streamActions});

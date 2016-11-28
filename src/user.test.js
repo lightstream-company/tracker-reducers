@@ -85,6 +85,14 @@ describe('user', () => {
       expect(state.lastAction).to.have.a.property('type', 'USER_SIGNED_IN');
       expect(state.lastAction).to.have.a.property('date', '2016-09-19T23:28:44.651Z');
     });
+
+    it('with 1 auto event', () => {
+      const state1 = reducer(initUser(), eventMapper(signedIn));
+      const state = reducer(state1, eventMapper(debitedEvent));
+
+      expect(state.lastAction).to.have.a.property('type', 'USER_SIGNED_IN');
+      expect(state.lastAction).to.have.a.property('date', '2016-09-19T23:28:44.651Z');
+    });
   });
 
 });
