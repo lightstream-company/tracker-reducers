@@ -11,6 +11,7 @@ const initialState = State({
 });
 
 module.exports = handleActions({
+  RESET: (state, action) => new State(action.payload.social),
   [social.LINKED]: (state, action) => {
     const {payload, id} = action;
     const {type, accountId} = payload;

@@ -3,6 +3,9 @@
 const {flatMap, values} = require('lodash');
 
 const events = {
+  global: {
+    RESET: 'RESET'
+  },
   account: {
     CREDITED: 'ACCOUNT_CREDITED',
     DEBITED: 'ACCOUNT_DEBITED',
@@ -61,4 +64,8 @@ const actions = [events.account.CREDITED, events.account.REFILLED]
   .concat(streamActions)
   .concat(values(events.social));
 
-module.exports = Object.assign({}, events, {all, actions, streamActions});
+module.exports = Object.assign({}, events, {
+  all,
+  actions,
+  streamActions
+});

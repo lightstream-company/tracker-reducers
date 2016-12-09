@@ -7,6 +7,7 @@ const {State, defaultStreamValue} = require('./streams.struct');
 const InitialState = new State({});
 
 module.exports = handleActions({
+  RESET: (state, action) => new State(action.payload.streams),
   [events.stream.CREATED]: (state, action) => {
     const {payload, id} = action;
     return State.update(state, {

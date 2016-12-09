@@ -12,6 +12,7 @@ const initialState = State({
 });
 
 module.exports = handleActions({
+  RESET: (state, action) => new State(action.payload.user),
   [user.BETA_SUBSCRIBED]: (state, action) => {
     return State.update(state, {
       profile: {

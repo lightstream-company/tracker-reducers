@@ -1,0 +1,670 @@
+{
+  "streams": {
+    "2593ede3": {
+      "name": "franck",
+      "id": "2593ede3",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [
+          "jean-charle",
+          "arnaud",
+          "test",
+          "abc",
+          "olalala",
+          "what"
+        ],
+        "instagram": [
+          "test",
+          "yolo",
+          "#hashtag",
+          "system",
+          "test",
+          "geant",
+          "zzz",
+          "hello",
+          "#h",
+          "aaaaa"
+        ]
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "BOUNDING_BOXES_CLEARED_FROM_STREAM",
+        "date": "2016-11-03T14:39:21.285Z"
+      }
+    },
+    "7c9470ea": {
+      "name": "test lololol",
+      "id": "7c9470ea",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [
+          "yolo"
+        ],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "KEYWORD_ADDED_TO_STREAM",
+        "date": "2016-07-19T16:11:08.447Z"
+      }
+    },
+    "8d0c8b5c": {
+      "name": "oyyo",
+      "id": "8d0c8b5c",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": "211677820"
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "SOCIAL_ITEM_LINKED_TO_STREAM",
+        "date": "2016-10-07T10:50:59.902Z"
+      }
+    },
+    "752b865c": {
+      "name": "encore un autre test",
+      "id": "752b865c",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-06-30T16:09:46.881Z"
+      }
+    },
+    "86146fb0": {
+      "name": "Demo",
+      "id": "86146fb0",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [
+          "hello"
+        ],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [
+          "547334905378973"
+        ],
+        "twitter": "2815193686",
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "KEYWORD_REMOVED_FROM_STREAM",
+        "date": "2016-12-08T14:28:40.693Z"
+      }
+    },
+    "7cb92577": {
+      "name": "pepeow",
+      "id": "7cb92577",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-08-30T09:11:37.786Z"
+      }
+    },
+    "cf7cddbd": {
+      "name": "abc",
+      "id": "cf7cddbd",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-08-30T09:11:50.729Z"
+      }
+    },
+    "a822f30a": {
+      "name": "machin bidule",
+      "id": "a822f30a",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-08-30T09:12:52.695Z"
+      }
+    },
+    "8e3dd9dc": {
+      "name": "hello-53",
+      "id": "8e3dd9dc",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-08-30T10:31:48.618Z"
+      }
+    },
+    "f4c9b87a": {
+      "name": "what",
+      "id": "f4c9b87a",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-08-30T10:43:05.556Z"
+      }
+    },
+    "3e9c162f": {
+      "name": "this is a facking new stream",
+      "id": "3e9c162f",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-08-30T10:44:26.302Z"
+      }
+    },
+    "96e87ef9": {
+      "name": "wesh",
+      "id": "96e87ef9",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-08-30T10:54:12.039Z"
+      }
+    },
+    "926ee574": {
+      "name": "blah",
+      "id": "926ee574",
+      "enabled": false,
+      "activated": true,
+      "keywords": {
+        "twitter": [
+          "hello"
+        ],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "SOCIAL_ITEM_UNLINKED_FROM_STREAM",
+        "date": "2016-10-06T14:04:19.333Z"
+      }
+    },
+    "b37200da": {
+      "name": "hey",
+      "id": "b37200da",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-08-30T11:01:02.229Z"
+      }
+    },
+    "22ee29f2": {
+      "name": "wili?",
+      "id": "22ee29f2",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-08-30T11:23:00.069Z"
+      }
+    },
+    "75a335d3": {
+      "name": "just a test",
+      "id": "75a335d3",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-09-07T16:49:55.212Z"
+      }
+    },
+    "c3111a12": {
+      "name": "get the id ?",
+      "id": "c3111a12",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-09-07T16:51:59.067Z"
+      }
+    },
+    "90712da2": {
+      "name": "goto?",
+      "id": "90712da2",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-09-07T16:54:03.404Z"
+      }
+    },
+    "062e73a4": {
+      "name": "heyheyman",
+      "id": "062e73a4",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-09-07T16:54:49.068Z"
+      }
+    },
+    "c3284dac": {
+      "name": "waaaai",
+      "id": "c3284dac",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-09-07T16:56:17.257Z"
+      }
+    },
+    "0b519403": {
+      "name": "merde",
+      "id": "0b519403",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-09-07T16:57:09.207Z"
+      }
+    },
+    "08ab4939": {
+      "name": "pepow",
+      "id": "08ab4939",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-09-08T13:35:02.505Z"
+      }
+    },
+    "6b3e6275": {
+      "name": "Paris",
+      "id": "6b3e6275",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-10-05T09:11:24.285Z"
+      }
+    },
+    "5df659d6": {
+      "name": "France",
+      "id": "5df659d6",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": "59106894",
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [
+          [
+            -7.110446363499136,
+            42.118757048900136,
+            9.794667169359627,
+            51.052087279248894
+          ]
+        ],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "SOCIAL_ITEM_LINKED_TO_STREAM",
+        "date": "2016-12-09T10:40:19.004Z"
+      }
+    },
+    "9023893e": {
+      "name": "Val Thorens",
+      "id": "9023893e",
+      "enabled": true,
+      "activated": true,
+      "keywords": {
+        "twitter": [],
+        "instagram": []
+      },
+      "socialItems": {
+        "facebook": [],
+        "twitter": null,
+        "instagram": null
+      },
+      "boundingBoxes": {
+        "twitter": [],
+        "instagram": []
+      },
+      "lastAction": {
+        "type": "STREAM_CREATED",
+        "date": "2016-10-25T16:49:42.007Z"
+      }
+    }
+  },
+  "user": {
+    "profile": {
+      "email": "franck.ernewein@gmail.com",
+      "postsRemaining": 49282000,
+      "id": "8d86c10d",
+      "companyName": "Tweetping",
+      "firstName": "Franck",
+      "lastConnectionDate": "2016-12-09T09:49:01.265Z",
+      "lastName": "Ernewein"
+    },
+    "lastAction": {
+      "type": "SOCIAL_ITEM_LINKED_TO_STREAM",
+      "date": "2016-12-09T10:40:19.004Z"
+    },
+    "logged": true
+  },
+  "social": {
+    "twitter": {
+      "59106894": {
+        "id": "59106894-twitter",
+        "network": "twitter",
+        "userId": "8d86c10d",
+        "accountId": "59106894",
+        "screenName": "franckernewein",
+        "valid": true
+      },
+      "2815193686": {
+        "id": "2815193686-twitter",
+        "network": "twitter",
+        "userId": "8d86c10d",
+        "accountId": "2815193686",
+        "screenName": "twp_netflix",
+        "valid": true
+      }
+    },
+    "facebook": {
+      "10156950224315374": {
+        "id": "972c03e8",
+        "network": "facebook",
+        "userId": "8d86c10d",
+        "accountId": "10156950224315374",
+        "screenName": "Franck Ernewein",
+        "valid": true
+      }
+    },
+    "instagram": {
+      "211677820": {
+        "id": "211677820-instagram",
+        "network": "instagram",
+        "userId": "8d86c10d",
+        "accountId": "211677820",
+        "screenName": "franckernewein",
+        "valid": true
+      }
+    },
+    "facebookPages": {}
+  },
+  "version": 2289
+}
