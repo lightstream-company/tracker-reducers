@@ -20,7 +20,9 @@ const SocialAccount = t.struct({
   accountId: t.String,
   screenName: t.String,
   valid: t.Boolean,
-  stream: t.maybe(t.String)
+  stream: t.maybe(t.String),
+  token: t.maybe(t.String),
+  secretToken: t.maybe(t.String)
 }, 'SocialAccount');
 
 const socialAccountDefaultValues = {
